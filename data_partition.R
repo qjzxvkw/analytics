@@ -8,6 +8,17 @@ nrow(mtcars)
 index = sample(x=1:nrow(mtcars), size=.7 * nrow(mtcars), replace = F)
 index
 
+
+
+
+#
+(gender = c('M','F','M'), size = 40, replace = T)
+(gender = )
+
+
+
+#
+
 mtcars[c(1,4),] #first & 4th row
 mtcars[-c(1,4),]
 (train= mtcars[index,])
