@@ -22,6 +22,6 @@ tail(dataiitb)
 dim(dataiitb)
 nrow(dataiitb)
 ncol(dataiitb)
-structure(dataiitb)
+str(dataiitb)
 class(dataiitb)
 
