@@ -47,3 +47,5 @@ rpart.plot(fit3)
 ?rpart
 fit4 = kmeans(data2[,c('age',"marks1",'marks2')],centers = 4)
 fit4$centers
+
+
