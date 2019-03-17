@@ -11,9 +11,6 @@ index
 
 
 
-#
-(gender = c('M','F','M'), size = 40, replace = T)
-(gender = )
 
 
 
