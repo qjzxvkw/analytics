@@ -25,3 +25,25 @@ ncol(dataiitb)
 str(dataiitb)
 class(dataiitb)
 
+#import from online csv
+
+data2=read.csv('https://raw.githubusercontent.com/qjzxvkw/analytics/master/data/dataiitb.csv')
+data2
+
+
+library(dplyr)
+data2 %>% group_by(sgender) %>% summarise(meanM1=mean(marks1),meanM2=mean(marks2))
+data2 %>% group_by(sgende,course) %>% summarise(meanM1=mean(marks1),meanM2=mean(marks2))
+
+barplot(height = c(10,20,50,6))
+barplot(height = table(data2$passfail))
+hist(data2$marks1)
+plot(density(data2$age))
+fit1=glm(age ~ marks1 +marks2,data = data2)
+summary(fit1)
+library(rpart.plot)
+fit3 = rpart(age ~ marks1+marks2, data=data2,method='class')
+rpart.plot(fit3)
+?rpart
+fit4 = kmeans(data2[,c('age',"marks1",'marks2')],centers = 4)
+fit4$centers
